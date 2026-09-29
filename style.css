@@ -730,21 +730,25 @@ footer {
   margin-top: 1.5rem;
 }
 .social-btn {
-  width: 36px; height: 36px;
+  width: 40px; height: 40px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 600;
   color: var(--muted);
   transition: all var(--transition);
 }
+.social-btn svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
+}
 .social-btn:hover {
-  background: var(--gold);
-  color: var(--black);
-  border-color: var(--gold);
+  background: rgba(46,204,113,0.1);
+  color: var(--emerald);
+  border-color: var(--emerald);
 }
 .hours-list { display: flex; flex-direction: column; gap: 0.65rem; }
 .hours-list li {
