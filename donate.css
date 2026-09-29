@@ -43,7 +43,8 @@ body{
             rgba(0,0,0,.78),
             rgba(0,0,0,.82)
         ),
-        url("images/hero-bg.jpg");
+        radial-gradient(ellipse at center, rgba(27, 77, 62, .45), transparent 65%),
+        linear-gradient(160deg, #0a0a0a 0%, #0d1a14 100%);
 
     background-size:cover;
     background-position:center;

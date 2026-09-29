@@ -220,6 +220,78 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   from { transform: translateY(-50%) rotate(0deg); }
   to   { transform: translateY(-50%) rotate(360deg); }
 }
+/* ---- HERO ORBIT LIGHTS ---- */
+.orbit-lights {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.orbit-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: orbitSpin linear infinite;
+}
+.orbit-ring.reverse { animation-direction: reverse; }
+
+.light-dot {
+  position: absolute;
+  border-radius: 50%;
+  animation: dotPulse ease-in-out infinite;
+}
+
+.orbit-ring-1 { animation-duration: 18s; }
+.orbit-ring-1 .light-dot {
+  top: -4px; left: 186px;
+  width: 8px; height: 8px;
+  background: var(--gold-light);
+  box-shadow: 0 0 10px 3px var(--gold), 0 0 22px 6px rgba(201,168,76,0.35);
+  animation-duration: 3s;
+}
+
+.orbit-ring-2 { animation-duration: 26s; }
+.orbit-ring-2 .light-dot {
+  top: -3px; left: 257px;
+  width: 6px; height: 6px;
+  background: var(--emerald);
+  box-shadow: 0 0 8px 2px var(--emerald), 0 0 18px 5px rgba(46,204,113,0.3);
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+
+.orbit-ring-3 { animation-duration: 34s; }
+.orbit-ring-3 .light-dot {
+  top: -3px; left: 327px;
+  width: 5px; height: 5px;
+  background: var(--gold);
+  box-shadow: 0 0 6px 2px var(--gold-light);
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+
+.orbit-ring-4 { animation-duration: 12s; }
+.orbit-ring-4 .light-dot {
+  top: -3px; left: 137px;
+  width: 5px; height: 5px;
+  background: var(--emerald);
+  box-shadow: 0 0 8px 3px rgba(46,204,113,0.5);
+  animation-duration: 2.4s;
+}
+
+@keyframes orbitSpin {
+  to { transform: rotate(360deg); }
+}
+@keyframes dotPulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.8); }
+  50%      { opacity: 1;   transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring, .light-dot { animation: none !important; }
+}
 .hero-content {
   position: relative;
   z-index: 2;
