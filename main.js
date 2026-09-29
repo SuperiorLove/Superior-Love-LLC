@@ -204,7 +204,7 @@ const observer = new IntersectionObserver((entries) => {
   '#about .about-inner',
   '.care-tile',
   '.amenities-inner',
-  '.gallery-item',
+  '.org-chart',
   '.amenities-panel',
   '#promise .promise-inner',
   '.testimonial-card',

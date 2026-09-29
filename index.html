@@ -28,7 +28,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#care-options">Care Options</a></li>
         <li><a href="#amenities">Amenities</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#team">Our Team</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="donate.html" class="nav-deposit">Donate</a></li>
@@ -326,105 +326,45 @@
     </div>
   </div>
 </section>
-  <section id="amenities">
-    <div class="amenities-inner">
-      <div class="amenities-text">
-        <div class="section-label" style="text-align:left;">Daily Life</div>
-        <h2>Services &amp; <span class="green-text">Amenities</span></h2>
-        <p class="amenities-sub">Life at Superior Love Senior Living is designed to balance daily support with meaningful moments, genuine connection, and the simple comforts of home.</p>
-        <ul class="amenities-list">
-          <li><span class="amenity-check">&#10003;</span> 24-hour care and supervision</li>
-          <li><span class="amenity-check">&#10003;</span> Assistance with activities of daily living</li>
-          <li><span class="amenity-check">&#10003;</span> Medication management</li>
-          <li><span class="amenity-check">&#10003;</span> Housekeeping and laundry</li>
-          <li><span class="amenity-check">&#10003;</span> Three daily meals with snacks and dietary accommodations</li>
-          <li><span class="amenity-check">&#10003;</span> Social activities and life enrichment programs</li>
-          <li><span class="amenity-check">&#10003;</span> Spiritual care and optional worship opportunities</li>
-          <li><span class="amenity-check">&#10003;</span> Care coordination with home health, hospice, and therapy providers</li>
-          <li><span class="amenity-check">&#10003;</span> Secure memory care environment with added safety measures</li>
-          <li><span class="amenity-check">&#10003;</span> Transportation assistance</li>
-        </ul>
-        <a href="#booking" class="btn btn-primary" style="margin-top:2rem; display:inline-block;">Schedule a Tour</a>
-      </div>
-      <div class="amenities-visual">
-        <div class="amenities-logo-display">
-          <img src="logo.webp" alt="Superior Love LLC" class="amenities-logo" />
-          <div class="amenities-ring amenities-ring-1"></div>
-          <div class="amenities-ring amenities-ring-2"></div>
-          <div class="amenities-ring amenities-ring-3"></div>
-        </div>
-        <div class="amenities-stat-group">
-          <div class="amenities-stat">
-            <span class="stat-number">24/7</span>
-            <span class="stat-label">Care &amp; Supervision</span>
-          </div>
-          <div class="amenities-stat">
-            <span class="stat-number">5</span>
-            <span class="stat-label">Care Programs</span>
-          </div>
-          <div class="amenities-stat">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Committed to Dignity</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ====================================================
-       GALLERY
+       TEAM / ORGANIZATION CHART
+       To add someone, copy an <li class="org-node"> block.
+       - Same level: add it next to an existing <li> in the same <ul>.
+       - Reports to someone: put it inside a <ul class="org-children">
+         within that person's <li> (create the <ul> if it isn't there).
+       Swap the placeholder div for <img src="your-photo.jpg" alt="Title" />
+       inside .org-photo to show a real picture.
        ==================================================== -->
-  <section id="gallery">
-    <div class="section-label">A Closer Look</div>
+  <section id="team">
+    <div class="section-label">Our Team</div>
     <div class="container">
-      <h2>Life at <span class="green-text">Superior Love Senior Living</span></h2>
-      <p class="section-sub">A warm, welcoming environment where every resident feels at home. [Replace placeholders below with real facility photos.]</p>
+      <h2>Meet the <span class="green-text">Superior Love Team</span></h2>
+      <p class="section-sub">The people behind the care — dedicated to treating every resident like family.</p>
 
-      <div class="gallery-grid">
-        <div class="gallery-item gallery-item-large" data-caption="Our welcoming common area">
-          <div class="gallery-placeholder gp-1">
-            <span>&#127968;</span>
-            <p>Facility Exterior</p>
-          </div>
-          <div class="gallery-overlay"><span>&#128247;</span></div>
-        </div>
-        <div class="gallery-item" data-caption="Residents enjoying activities together">
-          <div class="gallery-placeholder gp-2">
-            <span>&#127918;</span>
-            <p>Activity Room</p>
-          </div>
-          <div class="gallery-overlay"><span>&#128247;</span></div>
-        </div>
-        <div class="gallery-item" data-caption="Shared dining space with warm lighting">
-          <div class="gallery-placeholder gp-3">
-            <span>&#127859;</span>
-            <p>Dining Area</p>
-          </div>
-          <div class="gallery-overlay"><span>&#128247;</span></div>
-        </div>
-        <div class="gallery-item" data-caption="Comfortable resident lounge">
-          <div class="gallery-placeholder gp-4">
-            <span>&#128218;</span>
-            <p>Resident Lounge</p>
-          </div>
-          <div class="gallery-overlay"><span>&#128247;</span></div>
-        </div>
-        <div class="gallery-item" data-caption="Caregiver and resident one-on-one time">
-          <div class="gallery-placeholder gp-5">
-            <span>&#129657;</span>
-            <p>Personal Care</p>
-          </div>
-          <div class="gallery-overlay"><span>&#128247;</span></div>
-        </div>
-        <div class="gallery-item gallery-item-wide" data-caption="Group engagement and wellness activities">
-          <div class="gallery-placeholder gp-6">
-            <span>&#127881;</span>
-            <p>Community Events</p>
-          </div>
-          <div class="gallery-overlay"><span>&#128247;</span></div>
-        </div>
+      <div class="org-chart">
+        <ul class="org-tree">
+          <li class="org-node">
+            <div class="org-card">
+              <div class="org-photo">
+                <div class="org-photo-placeholder" aria-hidden="true">&#128100;</div>
+              </div>
+              <span class="org-name">Your Name</span>
+              <span class="org-title">Owner &amp; Administrator</span>
+            </div>
+            <!--
+            <ul class="org-children">
+              <li class="org-node">
+                <div class="org-card">
+                  <div class="org-photo"><img src="photo.jpg" alt="Care Manager" /></div>
+                  <span class="org-name">Name</span>
+                  <span class="org-title">Care Manager</span>
+                </div>
+              </li>
+            </ul>
+            -->
+          </li>
+        </ul>
       </div>
-      <p class="gallery-note">&#128247; Replace placeholder tiles with real photos of your facility and residents (with consent).</p>
     </div>
   </section>
 
@@ -693,7 +633,7 @@
             <li><a href="#about">About Us</a></li>
             <li><a href="#care-options">Care Options</a></li>
             <li><a href="#amenities">Amenities</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#team">Our Team</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#booking">Schedule a Visit</a></li>
             <li><a href="donate.html">Donate</a></li>
