@@ -143,7 +143,11 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 .nav-logo img {
   width: 36px; height: 36px;
-  object-fit: contain;
+  /* Logo artwork is a wide white canvas: cover crops the side margins,
+     padding keeps the wordmark inside the circle */
+  object-fit: cover;
+  padding: 3px;
+  background: #fafafa;
   border-radius: 50%;
   border: 1px solid var(--border);
 }
@@ -215,7 +219,9 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   animation: slowRotate 60s linear infinite;
   pointer-events: none;
 }
-.chakra-watermark { width: 100%; }
+.hero-chakra-bg { mix-blend-mode: screen; }
+/* Invert so the logo's white canvas turns black and disappears under screen blending */
+.chakra-watermark { width: 100%; filter: invert(1) hue-rotate(180deg); }
 @keyframes slowRotate {
   from { transform: translateY(-50%) rotate(0deg); }
   to   { transform: translateY(-50%) rotate(360deg); }
@@ -314,10 +320,12 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 .about-logo {
   width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
   border-radius: 50%;
   border: 2px solid var(--border);
-  padding: 1rem;
-  background: rgba(27,77,62,0.12);
+  padding: 1.5rem;
+  background: #fafafa;
 }
 .about-img-accent {
   position: absolute;
@@ -602,7 +610,8 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .booking-note-logo {
   width: 44px; height: 44px;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
+  background: #fafafa;
   border: 1px solid var(--border);
   padding: 4px;
   flex-shrink: 0;
@@ -679,7 +688,8 @@ footer {
 .footer-logo {
   width: 56px; height: 56px;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
+  background: #fafafa;
   border: 1px solid var(--border);
   padding: 6px;
   margin-bottom: 0.75rem;
@@ -1065,12 +1075,12 @@ footer {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
   border: 2px solid var(--border);
-  padding: 10px;
+  padding: 12px;
   position: relative;
   z-index: 2;
-  background: rgba(27,77,62,0.12);
+  background: #fafafa;
 }
 .amenities-ring {
   position: absolute;
@@ -1329,7 +1339,8 @@ footer {
   border-radius: 50%;
   border: 1px solid var(--border);
   padding: 5px;
-  object-fit: contain;
+  object-fit: cover;
+  background: #fafafa;
   margin-bottom: 1.25rem;
 }
 .promise-card h4 {
@@ -1486,10 +1497,11 @@ footer {
   transform: translateY(-50%);
   width: 350px;
   opacity: 0.06;
+  mix-blend-mode: screen;
   animation: slowRotate 60s linear infinite;
   pointer-events: none;
 }
-.cta-banner-chakra img { width: 100%; }
+.cta-banner-chakra img { width: 100%; filter: invert(1) hue-rotate(180deg); }
 .cta-banner-inner {
   position: relative;
   z-index: 2;
@@ -1503,7 +1515,8 @@ footer {
   border-radius: 50%;
   border: 2px solid rgba(201,168,76,0.4);
   padding: 8px;
-  object-fit: contain;
+  object-fit: cover;
+  background: #fafafa;
   flex-shrink: 0;
 }
 .cta-banner-text h2 {
@@ -1697,8 +1710,8 @@ footer {
   border-radius: 50%;
   border: 1px solid var(--border);
   padding: 6px;
-  object-fit: contain;
-  background: rgba(27, 77, 62, 0.1);
+  object-fit: cover;
+  background: #fafafa;
   animation: pulseRing 4s ease-in-out infinite;
   flex-shrink: 0;
 }
