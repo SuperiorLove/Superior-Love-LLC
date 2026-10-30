@@ -89,6 +89,39 @@ document.querySelectorAll('.team-expand-btn').forEach(btn => {
   });
 });
 
+// ---- TEAM MEMBER INFO BOX ----
+// Works for every .org-card: name, title and photo are read from the card,
+// the introduction from its hidden .org-bio block.
+(function () {
+  const modal = document.getElementById('teamModal');
+  if (!modal) return;
+  const nameEl  = document.getElementById('teamModalName');
+  const titleEl = document.getElementById('teamModalTitle');
+  const bioEl   = document.getElementById('teamModalBio');
+  const photoEl = document.getElementById('teamModalPhoto');
+
+  document.querySelectorAll('.org-card .org-name').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card  = btn.closest('.org-card');
+      const title = card.querySelector('.org-title');
+      const bio   = card.querySelector('.org-bio');
+      const photo = card.querySelector('.org-photo');
+
+      nameEl.textContent  = btn.textContent.trim();
+      titleEl.textContent = title ? title.textContent.trim() : '';
+      bioEl.innerHTML     = bio ? bio.innerHTML : '';
+      photoEl.innerHTML   = photo ? photo.innerHTML : '';
+
+      modal.showModal();
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  document.getElementById('teamModalClose').addEventListener('click', () => modal.close());
+  modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
+  modal.addEventListener('close', () => { document.body.style.overflow = ''; });
+})();
+
 // ---- GALLERY LIGHTBOX ----
 const lightbox        = document.getElementById('lightbox');
 const lightboxMedia   = document.getElementById('lightboxMedia');
