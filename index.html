@@ -334,6 +334,9 @@
          within that person's <li> (create the <ul> if it isn't there).
        Swap the placeholder div for <img src="your-photo.jpg" alt="Title" />
        inside .org-photo to show a real picture.
+       Clicking a name opens the shared info box below. It reuses the
+       card's name, title and photo, plus the text inside .org-bio —
+       so each new person only needs their own .org-bio paragraph(s).
        ==================================================== -->
   <section id="team">
     <div class="section-label">Our Team</div>
@@ -348,16 +351,22 @@
               <div class="org-photo">
                 <div class="org-photo-placeholder" aria-hidden="true">&#128100;</div>
               </div>
-              <span class="org-name">Christina Thompson</span>
+              <button type="button" class="org-name">Christina Thompson</button>
               <span class="org-title">Administrator</span>
+              <div class="org-bio" hidden>
+                <p>[Employee introduction — e.g., Christina founded Superior Love with a heart for serving seniors. Share her background, years of caregiving experience, and what she loves most about caring for residents.]</p>
+              </div>
             </div>
             <!--
             <ul class="org-children">
               <li class="org-node">
                 <div class="org-card">
                   <div class="org-photo"><img src="photo.jpg" alt="Care Manager" /></div>
-                  <span class="org-name">Name</span>
+                  <button type="button" class="org-name">Name</button>
                   <span class="org-title">Care Manager</span>
+                  <div class="org-bio" hidden>
+                    <p>Introduction paragraph about this team member.</p>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -366,6 +375,20 @@
         </ul>
       </div>
     </div>
+
+    <!-- Shared team member info box (filled in by main.js) -->
+    <dialog class="team-modal" id="teamModal" aria-labelledby="teamModalName">
+      <button type="button" class="team-modal-close" id="teamModalClose" aria-label="Close">&#10005;</button>
+      <div class="team-modal-inner">
+        <div class="team-modal-text">
+          <h3 class="team-modal-name" id="teamModalName"></h3>
+          <p class="team-modal-title" id="teamModalTitle"></p>
+          <div class="gold-rule"></div>
+          <div class="team-modal-bio" id="teamModalBio"></div>
+        </div>
+        <div class="team-modal-photo" id="teamModalPhoto"></div>
+      </div>
+    </dialog>
   </section>
 
   <!-- ====================================================
